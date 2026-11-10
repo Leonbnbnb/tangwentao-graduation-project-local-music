@@ -1,0 +1,119 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>移动端预览 | 听见之间</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  /* 覆盖全局入场动画，保证这一页直接可见 */
+  html, body { opacity: 1 !important; transform: none !important; }
+  .preview-page {
+    min-height: 100svh;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+    padding: 40px clamp(24px, 5vw, 72px);
+    background: radial-gradient(120% 90% at 20% 0%, #f7f3ea 0%, #eef1ec 55%, #e6ece6 100%);
+  }
+  .preview-copy h1 { font-size: clamp(26px, 3vw, 40px); letter-spacing: -.02em; margin: 6px 0 14px; }
+  .preview-copy p { color: #4b5350; line-height: 1.8; max-width: 34ch; }
+  .preview-copy .eyebrow { color: var(--coral); }
+  .preview-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  .preview-tab {
+    padding: 8px 15px; border: 1px solid #d7ded6; border-radius: 999px;
+    background: #fff; color: #3d4441; font-size: 13px; font-weight: 700; cursor: pointer;
+    transition: border-color .16s ease, color .16s ease, background-color .16s ease;
+  }
+  .preview-tab:hover { border-color: var(--coral); color: var(--coral); }
+  .preview-tab.is-active { background: var(--ink); border-color: var(--ink); color: #fff; }
+  .preview-tip { margin-top: 26px; font-size: 12.5px; color: #7a827c; line-height: 1.9; }
+  .preview-tip code { background: #fff; border: 1px solid #e2e8e1; border-radius: 6px; padding: 1px 6px; }
+
+  .phone {
+    position: relative;
+    width: 390px;
+    height: 844px;
+    padding: 12px;
+    border-radius: 46px;
+    background: #14161a;
+    box-shadow: 0 40px 90px -46px rgba(16, 18, 17, .75), inset 0 0 0 1px rgba(255,255,255,.08);
+  }
+  .phone::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.35);
+  }
+  .phone iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 34px;
+    background: #fff;
+    display: block;
+  }
+  .phone-label {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    letter-spacing: .12em;
+    color: #6b736d;
+    white-space: nowrap;
+  }
+  @media (max-width: 1080px) {
+    /* 覆盖全局入场动画，保证这一页直接可见 */
+  html, body { opacity: 1 !important; transform: none !important; }
+  .preview-page { grid-template-columns: 1fr; justify-items: center; text-align: center; padding-top: 32px; }
+    .preview-copy p { max-width: 30ch; margin-inline: auto; }
+    .preview-tabs { justify-content: center; }
+    .phone { transform: scale(.82); transform-origin: top center; }
+  }
+</style>
+</head>
+<body class="preview-page">
+
+  <section class="preview-copy">
+    <p class="eyebrow">MOBILE PREVIEW · 390 × 844</p>
+    <h1>移动端效果预览</h1>
+    <p>右边是 390 像素宽的手机画面，直接点里面的导航就能操作，不需要开开发者工具。</p>
+    <div class="preview-tabs">
+      <button class="preview-tab is-active" type="button" data-src="index.php">首页</button>
+      <button class="preview-tab" type="button" data-src="music.html">作品总览</button>
+      <button class="preview-tab" type="button" data-src="artist-shan-yichun.html">人物档案</button>
+      <button class="preview-tab" type="button" data-src="fans.html">歌迷空间</button>
+      <button class="preview-tab" type="button" data-src="media.html">声音观察</button>
+    </div>
+    <p class="preview-tip">
+      录屏时就停在这一屏讲“响应式适配”。<br>
+      想自己用浏览器调试：按 <code>F12</code> 打开开发者工具后，再按 <code>Ctrl + Shift + M</code>
+      才切到手机模拟模式（只按 F12 只是打开面板）。
+    </p>
+  </section>
+
+  <div class="phone">
+    <span class="phone-label">iPhone 14 · 390 × 844</span>
+    <iframe id="phone-frame" src="index.php" title="移动端预览"></iframe>
+  </div>
+
+  <script>
+    const frame = document.getElementById("phone-frame");
+    document.querySelectorAll(".preview-tab").forEach((tab) => {
+      tab.addEventListener("click", () => {
+        document.querySelectorAll(".preview-tab").forEach((t) => t.classList.remove("is-active"));
+        tab.classList.add("is-active");
+        frame.src = tab.dataset.src;
+      });
+    });
+  </script>
+</body>
+</html>
+

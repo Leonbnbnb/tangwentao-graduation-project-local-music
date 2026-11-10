@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="听见之间的代表作品播放列表与听众评论。">
+  <title>作品总览 | 听见之间</title>
+  <link rel="stylesheet" href="css/style.css"><script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">跳到主要内容</a>
+<nav class="site-nav" aria-label="主导航">
+    <div class="container nav-shell">
+      <a class="brand" href="index.php" aria-label="听见之间首页"><span class="brand-mark" aria-hidden="true">听</span><span>听见之间</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span aria-hidden="true">☰</span><span class="sr-only">打开导航</span></button>
+      <ul class="nav-links" id="site-menu">
+        <li><a href="index.php">首页</a></li>
+        <li><a href="index.php#artists">音乐人阵容</a></li>
+        <li><a href="music.html">作品总览</a></li>
+        <li><a href="fans.html">歌迷空间</a></li>
+        <li><a href="media.html">声音观察</a></li>
+        <li><a href="admin.php" class="nav-admin">后台管理</a></li>
+      </ul>
+    </div>
+  </nav>
+<main id="main-content">
+<header class="page-masthead music-masthead"><div class="container"><div><p class="eyebrow">NOW PLAYING</p><h1>作品总览</h1></div><p class="intro">把三位音乐人的代表作放进同一张播放列表，按下播放，沿着声音与情绪继续听。</p></div></header>
+<section class="section"><div class="container"><header class="section-heading"><p class="eyebrow">SELECTED SONGS</p><h2>代表作品</h2><p>点击任意作品即可试听保存在本地的音频片段（约 1 分钟），播放进度与当前曲目状态实时同步。</p></header>
+<div class="music-player" data-player aria-live="polite"><div class="music-player-art" data-player-art aria-hidden="true">♪</div><div class="music-player-copy"><span class="music-player-label">LOCAL LISTENING</span><strong data-player-title>选择一首作品</strong><span data-player-status>歌曲已保存到本地，可直接播放</span><audio data-local-audio controls preload="metadata" aria-label="本地歌曲播放器"></audio></div><div class="music-equalizer" data-equalizer aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><div class="music-player-progress"><span data-player-progress></span></div></div>
+<div class="music-grid">
+<article class="music-card"><div class="music-card-media"><img src="covers/cover-shan-yongbu.jpg" alt="永不失联的爱封面"></div><div class="music-card-body"><span class="music-meta">单依纯 · 现场代表作</span><h2>永不失联的爱</h2><p>层层推进的情绪和克制爆发。</p><button class="text-link play-track" type="button" data-title="永不失联的爱" data-artist="单依纯" data-cover="covers/cover-shan-yongbu.jpg" data-local-audio="media/audio/shanyichun-yongbu.m4a">播放 <span aria-hidden="true">▶</span></button></div></article>
+<article class="music-card"><div class="music-card-media"><img src="covers/cover-shan-wei.jpg" alt="喂封面"></div><div class="music-card-body"><span class="music-meta">单依纯 · 流行单曲</span><h2>喂</h2><p>更轻盈的律动与近距离的语气。</p><button class="text-link play-track" type="button" data-title="喂" data-artist="单依纯" data-cover="covers/cover-shan-wei.jpg" data-local-audio="media/audio/shanyichun-wei.m4a">播放 <span aria-hidden="true">▶</span></button></div></article>
+<article class="music-card"><div class="music-card-media"><img src="covers/cover-shan-zhaopian.jpg" alt="照片封面"></div><div class="music-card-body"><span class="music-meta">单依纯 · 抒情作品</span><h2>照片</h2><p>用柔和音色保留叙事中的留白。</p><button class="text-link play-track" type="button" data-title="照片" data-artist="单依纯" data-cover="covers/cover-shan-zhaopian.jpg" data-local-audio="media/audio/shanyichun-zhaopian.m4a">播放 <span aria-hidden="true">▶</span></button></div></article>
+<article class="music-card"><div class="music-card-media"><img src="covers/cover-yuqi-freak.jpg" alt="FREAK封面"></div><div class="music-card-body"><span class="music-meta">宋雨琦 · 风格探索</span><h2>FREAK</h2><p>复古摇滚质感与不被定义的态度。</p><button class="text-link play-track" type="button" data-title="FREAK" data-artist="宋雨琦" data-cover="covers/cover-yuqi-freak.jpg" data-local-audio="media/audio/songyuqi-freak.m4a">播放 <span aria-hidden="true">▶</span></button></div></article>
+<article class="music-card"><div class="music-card-media"><img src="covers/cover-yuqi-giant.jpg" alt="Giant封面"></div><div class="music-card-body"><span class="music-meta">宋雨琦 · 个人作品</span><h2>Giant</h2><p>用更宽阔的旋律讲述坚定与成长。</p><button class="text-link play-track" type="button" data-title="Giant" data-artist="宋雨琦" data-cover="covers/cover-yuqi-giant.jpg" data-local-audio="media/audio/songyuqi-giant.m4a">播放 <span aria-hidden="true">▶</span></button></div></article>
+<article class="music-card"><div class="music-card-media"><img src="covers/cover-lrh-nian.jpg" alt="年少有为封面"></div><div class="music-card-body"><span class="music-meta">李荣浩 · 都市叙事</span><h2>年少有为</h2><p>写下错过、成长与来不及兑现的愿望。</p><button class="text-link play-track" type="button" data-title="年少有为" data-artist="李荣浩" data-cover="covers/cover-lrh-nian.jpg" data-local-audio="media/audio/lironghao-nian-shaoyouwei.m4a">播放 <span aria-hidden="true">▶</span></button></div></article>
+</div></div></section>
+<section class="section music-video-section"><div class="container"><div class="music-video-shell"><div class="music-video-poster"><img data-video-poster src="covers/cover-shan-yongbu.jpg" alt="单依纯《永不失联的爱》视频封面"><span class="music-video-play" aria-hidden="true">▶</span></div><div class="music-video-copy"><p class="eyebrow">LIVE VIDEO ARCHIVE</p><h2 data-video-title>单依纯 · 永不失联的爱</h2><p data-video-description>对应歌手与歌曲的现场影像，视频文件已放入本地项目，可直接播放。</p><div class="video-switcher" role="tablist" aria-label="选择歌手视频"><button type="button" class="video-switch is-active" role="tab" aria-selected="true" data-video-src="media/shanyichun-yongbu.mp4" data-video-title="单依纯 · 永不失联的爱" data-video-poster="covers/cover-shan-yongbu.jpg">单依纯</button><button type="button" class="video-switch" role="tab" aria-selected="false" data-video-src="media/songyuqi-freak.mp4" data-video-title="宋雨琦 · FREAK" data-video-poster="covers/cover-yuqi-freak.jpg">宋雨琦</button><button type="button" class="video-switch" role="tab" aria-selected="false" data-video-src="media/lironghao-nian-shaoyouwei.mp4" data-video-title="李荣浩 · 年少有为" data-video-poster="covers/cover-lrh-nian.jpg">李荣浩</button></div><video data-artist-video controls preload="metadata" poster="covers/cover-shan-yongbu.jpg"><source src="media/shanyichun-yongbu.mp4" type="video/mp4">当前浏览器无法播放该视频，请尝试使用最新版浏览器。</video><p class="video-source-note">视频来源：Bilibili 对应歌曲页面（点击下方按钮可打开原视频） <a data-video-source-link href="https://www.bilibili.com/video/BV11HXvBzEyv" target="_blank" rel="noopener">打开原视频 ↗</a></p></div></div></div></section>
+<section class="section music-comments comments-section" data-comment-section data-api-url="index.html" data-artist-key="shan-yichun"><div class="container comments-layout"><div class="comments-intro"><p class="eyebrow">LISTENERS' NOTES</p><h2>边听边留下话</h2><p>评论和点赞已连接到本地 PHP 接口，刷新页面后仍会保留。</p><form class="comment-form" data-comment-form><label for="music-comment-name">昵称</label><input id="music-comment-name" name="name" type="text" maxlength="20" autocomplete="nickname" placeholder="你的昵称" required><div class="comment-label-row"><label for="music-comment-text">评论</label><span data-character-count>0 / 280</span></div><textarea id="music-comment-text" name="comment" maxlength="280" rows="5" placeholder="写下这首歌让你想到的画面……" required></textarea><button class="btn" type="submit">发布评论 <span aria-hidden="true">→</span></button><p class="comment-status" data-comment-status aria-live="polite"></p></form></div><div class="comments-feed"><div class="comments-feed-heading"><h3>听众留言</h3><span data-comment-count>0 条留言</span></div><div class="comment-list" data-comment-list></div><p class="comment-empty" data-comment-empty hidden>还没有留言，来写下第一条吧。</p></div></div><script type="application/json" data-comment-seeds>[{"id":"music-seed-1","name":"耳机里的光","text":"《永不失联的爱》的尾音很有画面感，适合在夜里慢慢听。","date":"8月20日","likes":28,"liked":false,"isOwn":false},{"id":"music-seed-2","name":"晴天耳机","text":"喜欢她把情绪留在停顿里，副歌反而更有力量。","date":"8月17日","likes":21,"liked":false,"isOwn":false}]</script></section>
+</main>
+<footer class="site-footer"><div class="container footer-bottom"><span>© <span data-current-year>2026</span> 听见之间</span><a href="index.html">回到首页 ↑</a></div></footer>
+</body></html>
